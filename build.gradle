@@ -14,10 +14,12 @@ dependencies {
     implementation("club.minnced:discord-webhooks:0.8.2")
     implementation('com.github.sarxos:webcam-capture:0.3.12')
 }
+
 jar {
     manifest {
         attributes(
-                "Main-Class": "dev.peter.luterium.Main"
+                'Manifest-Version': 1.0,
+                'Main-Class': 'dev.peter.luterium.Main'
         )
     }
 }

