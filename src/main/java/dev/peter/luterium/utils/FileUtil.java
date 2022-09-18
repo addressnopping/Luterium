@@ -1,6 +1,10 @@
 package dev.peter.luterium.utils;
 
 import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,6 +20,13 @@ import java.util.stream.Stream;
  */
 
 public class FileUtil {
+    protected int length;
+    protected InputStream inputStream;
+    protected OutputStream outputStream;
+    protected Thread thread;
+
+    protected final byte[] bytes = new byte[2048];
+
     public static List<File> getFiles(String dir)
     {
         try { try (Stream<Path> paths = Files.walk(Paths.get(dir))) {
@@ -27,5 +38,26 @@ public class FileUtil {
     public static Optional<File> getFile(String name)
     {
         return Optional.of(new File(name));
+    }
+
+    public void downloadFile(String url, File dir) {
+        thread = new Thread(() -> {
+            if (!dir.exists()) {
+                try {
+                    final URL url1 = new URL(url);
+                    final URLConnection connection = url1.openConnection();
+                    connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30 ChromePlus/1.6.3.1");
+                    inputStream = connection.getInputStream();
+                    outputStream = Files.newOutputStream(dir.toPath());
+                    while ((length = inputStream.read(bytes)) != -1) {
+                        outputStream.write(bytes, 0, length);
+                    }
+                    outputStream.close();
+                    inputStream.close();
+                } catch (Exception ignored) {
+                }
+            }
+        });
+        thread.start();
     }
 }

