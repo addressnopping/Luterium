@@ -4,12 +4,6 @@ import dev.peter.luterium.Main;
 import dev.peter.luterium.payload.PayloadExecutor;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.file.Path;
 import java.util.HashMap;
 
 import com.sun.jna.Native;
