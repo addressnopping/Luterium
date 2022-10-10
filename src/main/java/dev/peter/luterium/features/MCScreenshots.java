@@ -8,13 +8,12 @@ import org.zeroturnaround.zip.ZipUtil;
 import java.io.File;
 import java.util.Optional;
 
-import static org.zeroturnaround.zip.ZipUtil.*;
-
 /**
  * @author Peter
  * @since 10/09/2022
  * Gets Minecraft screenshots' folder.
  */
+
 public class MCScreenshots implements PayloadExecutor {
     Main main = new Main();
 
