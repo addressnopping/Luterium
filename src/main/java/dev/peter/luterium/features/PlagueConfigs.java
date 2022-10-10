@@ -17,7 +17,7 @@ public class PlagueConfigs implements PayloadExecutor {
     Main main = new Main();
 
     String path = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\Plague";
-    String zipPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\oof.zip";
+    String zipPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\oofPlague.zip";
 
     @Override
     public void execute() throws Exception {

