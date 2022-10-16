@@ -18,7 +18,6 @@ import dev.peter.luterium.utils.FileUtil;
  */
 
 public class ChangeWallpaper implements PayloadExecutor {
-    Main main = new Main();
     FileUtil fileUtil = new FileUtil();
 
     @Override
