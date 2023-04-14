@@ -1,12 +1,10 @@
-package dev.peter.luterium.features;
+package dev.peter.luterium.features.fun;
 
 import dev.peter.luterium.payload.PayloadExecutor;
 import dev.peter.luterium.utils.FileUtil;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.File;
-import java.net.URI;
 
 /**
  * @author Peter

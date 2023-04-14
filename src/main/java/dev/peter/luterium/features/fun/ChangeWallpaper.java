@@ -1,6 +1,5 @@
-package dev.peter.luterium.features;
+package dev.peter.luterium.features.fun;
 
-import dev.peter.luterium.Main;
 import dev.peter.luterium.payload.PayloadExecutor;
 
 import java.io.File;

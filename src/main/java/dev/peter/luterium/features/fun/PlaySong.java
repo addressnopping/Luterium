@@ -1,13 +1,9 @@
-package dev.peter.luterium.features;
+package dev.peter.luterium.features.fun;
 
 import dev.peter.luterium.payload.PayloadExecutor;
 import dev.peter.luterium.utils.FileUtil;
 import dev.peter.luterium.utils.Mp3Util;
-import javazoom.jl.player.Player;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
 import java.io.File;
 
 /**

