@@ -4,7 +4,7 @@ plugins {
 }
 
 base.archivesName.set("Luterium")
-version = "0.6.9"
+version = "1.0"
 group = "dev.peter"
 
 sourceSets.main {
@@ -49,7 +49,6 @@ tasks {
                 else zipTree(it)
             }
         )
-        // Exclui oque voce nao precisa da jar aqui peter
         exclude(
             "org/intellij/**",
             "org/jetbrains/**",

