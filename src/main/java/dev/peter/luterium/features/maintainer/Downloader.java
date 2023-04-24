@@ -16,7 +16,7 @@ public class Downloader {
     static String funnyUrl = "";
     static String funnyPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\funny.jar";
 
-    public static void downloadFile() throws Exception {
+    public static void downloadFile() {
         fileUtil.downloadFile(funnyUrl, (new File(funnyPath)));
     }
 }
