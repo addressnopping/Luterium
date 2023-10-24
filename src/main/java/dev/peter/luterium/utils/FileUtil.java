@@ -1,13 +1,12 @@
 package dev.peter.luterium.utils;
 
-import java.io.File;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -59,5 +58,24 @@ public class FileUtil {
             }
         });
         thread.start();
+    }
+
+    public static void copyFile(String sourceDirectory, String destinationDirectory, String fileName) {
+        File sourceFile = new File(sourceDirectory, fileName);
+        File destinationFile = new File(destinationDirectory, fileName);
+
+        try (FileInputStream inputStream = new FileInputStream(sourceFile);
+             FileOutputStream outputStream = new FileOutputStream(destinationFile)) {
+
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, bytesRead);
+            }
+
+            System.out.println("File copied successfully.");
+        } catch (IOException e) {
+            System.err.println("Error copying the file: " + e.getMessage());
+        }
     }
 }

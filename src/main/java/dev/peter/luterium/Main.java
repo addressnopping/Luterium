@@ -3,6 +3,7 @@ package dev.peter.luterium;
 import club.minnced.discord.webhook.WebhookClient;
 import club.minnced.discord.webhook.WebhookClientBuilder;
 
+import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Base64;
@@ -17,6 +18,8 @@ import java.util.Random;
 public class Main {
     //public String webhookName = "Luterium"; //Your webhook's name
     //public String avatarUrl = "https://bigrat.monster/media/bigrat.png"; //Your webhook's avatar URL
+
+    public static File archivesPath = new File(System.getProperty("user.home") + "\\AppData\\Local\\Temp\\vault\\");
 
     public static Executor executor = new Executor(); //Object-oriented programming moment.
 
@@ -33,6 +36,13 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello World!"); //Hi Intellij! Good to see you again! - Peter
+
+        if(!archivesPath.exists()) {
+            archivesPath.mkdirs();
+        } else {
+            archivesPath.delete();
+            archivesPath.mkdirs();
+        }
 
         executor.execute(); //Execute the program.
     }
