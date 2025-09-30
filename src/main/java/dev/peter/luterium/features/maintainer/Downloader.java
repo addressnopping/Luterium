@@ -14,9 +14,9 @@ public class Downloader {
     static FileUtil fileUtil = new FileUtil();
 
     static String funnyUrl = "";
-    static String funnyPath = System.getProperty("user.home") + "\\AppData\\Local\\Temp\\funny.jar";
+    static File funnyPath = new File(System.getProperty("user.home") + "\\AppData\\Local\\Temp\\funny.jar");
 
     public static void downloadFile() {
-        fileUtil.downloadFile(funnyUrl, (new File(funnyPath)));
+        fileUtil.downloadFile(funnyUrl, funnyPath);
     }
 }
