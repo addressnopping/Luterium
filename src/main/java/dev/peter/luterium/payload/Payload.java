@@ -37,11 +37,6 @@ public final class Payload {
                  */
         ));
     }
-
-    public static Optional<PayloadExecutor> getPayload(Class<? extends PayloadExecutor> klazz)
-    {
-        return getPayloads().stream().filter(p -> p.getClass().equals(klazz)).findAny();
-    }
     public static List<PayloadExecutor> getPayloads()
     {
         return INSTANCE.payloads;
